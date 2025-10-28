@@ -4,10 +4,13 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     [SerializeField] private InputActionMap inputs;
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip[] buttonSounds;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+        
         for (int i = 1; i <= 5; i++)
         {
             int index = i;
@@ -20,11 +23,6 @@ public class InputManager : MonoBehaviour
     private void OnButtonPressed(int index)
     {
         Debug.Log("Pressed button: " + index);
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
+        audioSource.PlayOneShot(buttonSounds[index - 1]);
     }
 }
