@@ -350,6 +350,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1751228534}
   - component: {fileID: 1751228533}
+  - component: {fileID: 1751228535}
+  - component: {fileID: 1751228536}
   m_Layer: 0
   m_Name: InputManager
   m_TagString: Untagged
@@ -369,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 56894bc4bff294e4da9f2f018b53c88a, type: 3}
   m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -383,8 +385,8 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: Controls
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!4 &1751228534
@@ -402,6 +404,207 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1751228535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751228532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05dd876e1ee3ee24bb73752cae6507cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  inputs:
+    m_Name: Inputs
+    m_Id: 55620574-4fb9-43fd-993f-98518f3aa5db
+    m_Asset: {fileID: 0}
+    m_Actions:
+    - m_Name: 1
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 11c2f4d5-2688-4e9e-8966-14cd9d27c242
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: 2
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 303ac8e0-ac98-402a-b8a7-eb784e836586
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: 3
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: cf10a266-1d5e-4856-9d89-846b83b423ee
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: 4
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 9dbe4702-c12c-4092-a4d2-e534b9f57906
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    - m_Name: 5
+      m_Type: 1
+      m_ExpectedControlType: Button
+      m_Id: 31638293-92c4-44e1-a1f8-990bd2c2e3ac
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Bindings:
+    - m_Name: 
+      m_Id: cdbc339a-9533-42fa-a50b-f4f679936d63
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 1
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 9a839719-5630-4304-9374-4d906fa4c1f4
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 2
+      m_Flags: 0
+    - m_Name: 
+      m_Id: d0d82827-5718-4964-9c53-6ca23762a335
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 3
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 1b206ae7-f1e4-466d-a10a-9c44ad87ad95
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 4
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 22434935-6ee1-47a8-8deb-b9546cf0cd7b
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: 5
+      m_Flags: 0
+  buttonSounds:
+  - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+  - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+  - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+  - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+  - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+--- !u!82 &1751228536
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751228532}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
