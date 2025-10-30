@@ -508,6 +508,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
   - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
   - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
+  polyrhythms: 0200000003000000040000000500000006000000
+  bpm: 60
+  startTime: 0
+  tolerance: 0.3
 --- !u!82 &1751228536
 AudioSource:
   m_ObjectHideFlags: 0
