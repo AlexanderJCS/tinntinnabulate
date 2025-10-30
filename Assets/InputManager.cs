@@ -29,6 +29,16 @@ public class InputManager : MonoBehaviour
         startTime = Time.time;
     }
 
+    private IEnumerator BeepOn2ndBeat()
+    {
+        while (true)
+        {
+            audioSource.PlayOneShot(buttonSounds[0]);
+
+            yield return new WaitForSeconds(60f / bpm);
+        }
+    }
+
     private void Update()
     {
         if (!firstUpdate)
