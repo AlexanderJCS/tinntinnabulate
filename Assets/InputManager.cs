@@ -8,13 +8,14 @@ public class InputManager : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip[] buttonSounds;
 
-    public uint[] polyrhythms;
+    [SerializeField] private uint[] polyrhythms;
+    [SerializeField] private CatSpinner[] cats;
     public float bpm = 60;  // where the beat aligns on the 2 polyrhythm
     public float startTime;
     public float tolerance = 0.1f;  // percent of the polyrhythm interval
     private bool firstUpdate = false;
     
-    void Start()
+    private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         
@@ -23,6 +24,7 @@ public class InputManager : MonoBehaviour
             int index = i;
             InputAction action = inputs.FindAction(index.ToString());
             action.performed += ctx => OnButtonPressed(index);
+            action.canceled += ctx => OnButtonReleased(index);
             action.Enable();
         }
 
@@ -47,11 +49,19 @@ public class InputManager : MonoBehaviour
             firstUpdate = true;
         }
     }
+
+    private void OnButtonReleased(int index)
+    {
+        Debug.Log(cats[index - 1] == null);
+        cats[index - 1].SetPressed(false);
+    }
     
     private void OnButtonPressed(int index)
     {
         audioSource.PlayOneShot(buttonSounds[index - 1]);
 
+        cats[index - 1].SetPressed(true);
+        
         float pressTime = Time.time - startTime;             // seconds since start
         float beatInterval = 60f / bpm;                      // seconds per beat
         float cycleSeconds = 2f * beatInterval;              // your cycle is 2 beats

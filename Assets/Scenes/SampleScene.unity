@@ -200,7 +200,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -509,6 +509,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
   - {fileID: 8300000, guid: 50eb657ba3f91e6498d036d68c42120b, type: 3}
   polyrhythms: 0200000003000000040000000500000006000000
+  cats:
+  - {fileID: 1970024905}
+  - {fileID: 1970024905}
+  - {fileID: 1970024905}
+  - {fileID: 1970024905}
+  - {fileID: 1970024905}
   bpm: 60
   startTime: 0
   tolerance: 0.3
@@ -621,7 +627,7 @@ GameObject:
   - component: {fileID: 1970024903}
   - component: {fileID: 1970024905}
   m_Layer: 0
-  m_Name: 0001_0
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -695,7 +701,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.11, y: -0.53, z: 0}
-  m_LocalScale: {x: 2.5080338, y: 2.5080338, z: 2.5080338}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -712,9 +718,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2169537deba8c4124bd6be9988ce809b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  path: Cat/06DrumUp
+  pathUp: Cat/06DrumUp
+  pathIntermediate: Cat/06DrumMid
+  pathDown: Cat/06DrumDown
   frames: 19
-  fps: 60
+  fps: 10
+  intermediateStateDuration: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
