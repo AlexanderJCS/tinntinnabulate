@@ -52,14 +52,12 @@ public class InputManager : MonoBehaviour
 
     private void OnButtonReleased(int index)
     {
-        cats[index - 1].SetPressed(false);
+        cats[index - 1].SetPressed(false, "", Color.white);
     }
     
     private void OnButtonPressed(int index)
     {
         audioSource.PlayOneShot(buttonSounds[index - 1]);
-
-        cats[index - 1].SetPressed(true);
         
         float pressTime = Time.time - startTime;             // seconds since start
         float beatInterval = 60f / bpm;                      // seconds per beat
@@ -103,5 +101,7 @@ public class InputManager : MonoBehaviour
         {
             Debug.Log($"{index}: rushing {percentOff:0.00}% (error {error:0.000}s)");
         }
+        
+        cats[index - 1].SetPressed(true, $"{error * 1000f:0}ms", Color.white);
     }
 }
