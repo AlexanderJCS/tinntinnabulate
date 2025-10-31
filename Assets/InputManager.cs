@@ -52,7 +52,6 @@ public class InputManager : MonoBehaviour
 
     private void OnButtonReleased(int index)
     {
-        Debug.Log(cats[index - 1] == null);
         cats[index - 1].SetPressed(false);
     }
     
