@@ -107,13 +107,13 @@ public class CatSpinner : MonoBehaviour
         else if (deltaMs < 0)
         {
             healthManager.Miss();
-            floatingTextSpawner.SpawnText(transform.position + Vector3.up, $"Dragging {deltaMs:0} ms", Color.red);
+            floatingTextSpawner.SpawnText(transform.position + Vector3.up, $"Dragging", Color.red);
             lastJudgedRotation = currentRotation;
         }
         else
         {
             healthManager.Miss();
-            floatingTextSpawner.SpawnText(transform.position + Vector3.up, $"Rushing {deltaMs:0} ms", Color.yellow);
+            floatingTextSpawner.SpawnText(transform.position + Vector3.up, $"Rushing", Color.yellow);
             lastJudgedRotation = currentRotation;
         }
     }
